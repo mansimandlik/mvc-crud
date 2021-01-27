@@ -1,0 +1,56 @@
+﻿@model IEnumerable<practicemvc.Models.Recruitment>
+
+@{
+    ViewBag.Title = "Interns Information";
+}
+
+<h2>Interns Information</h2>
+ 
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.intern)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Intern_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.technology)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.experience)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in ViewBag.val) {
+<tr>
+    <td>
+        @item.intern
+    </td>
+    <td>
+        @item.Intern_id
+    </td>
+    <td>
+        @item.address
+    </td>
+    <td>
+        @item.technology
+    </td>
+    <td>
+        @item.experience
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Update", new {  id=item.Intern_id  }) |
+        @Html.ActionLink("Delete", "Delete", new {  id=item.Intern_id })
+    </td>
+</tr>
+}
+
+</table>

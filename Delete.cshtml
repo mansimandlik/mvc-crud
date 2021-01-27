@@ -1,0 +1,57 @@
+﻿@model practicemvc.Models.Recruitment
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <hr />
+    <!--dl-- class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.intern)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.intern)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Intern_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Intern_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.technology)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.technology)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.experience)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.experience)
+        </dd>
+
+    </!--dl-->
+
+    @using (Html.BeginForm("Delete","Hiring",FormMethod.Post)) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "AllInterns")
+        </div>
+    }
+</div>
